@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Închiriere auto smart — Comfort, calitatea si rapiditatea</title>
+  <meta name="description" content="Închiriere auto smart — Volkswagen Caravelle 8+1 (80 €/zi) și SsangYong Korando (60 €/zi) în Bragadiru & București. Comfort, calitatea si rapiditatea." />
+  <meta name="theme-color" content="#2f72ff" />
+  <style>
+    :root{--accent:#2f72ff; --surface:#ffffff; --text:#222; --muted:#475569; --ring: #93c5fd}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#f6f8ff;color:var(--text)}
+    header,footer{background:var(--accent);color:#fff;padding:1rem;text-align:center}
+    nav a{color:#fff;margin:0 .6rem;text-decoration:none}
+    nav a:hover{text-decoration:underline}
+    section{padding:2rem;max-width:980px;margin:auto}
+    .card{border:1px solid #e2e8f0;border-radius:12px;padding:1rem;background:var(--surface)}
+    h1,h2{margin:.2rem 0 1rem}
+    /* ===== Carousel ===== */
+    .carousel{position:relative; overflow:hidden; border-radius:14px}
+    .carousel-viewport{display:flex; transition:transform .45s ease; will-change:transform}
+    .slide{min-width:100%; padding:1rem; display:grid; gap:1rem; align-items:center}
+    @media(min-width:760px){ .slide{grid-template-columns: 1.2fr .8fr} }
+    .slide img{width:100%; height:100%; max-height:360px; object-fit:cover; border-radius:12px; border:1px solid #e2e8f0}
+    .slide h3{margin:.2rem 0 .2rem}
+    .price{font-weight:800}
+    .c-controls{position:absolute; inset:auto 0 10px 0; display:flex; justify-content:center; gap:.35rem; pointer-events:none}
+    .dot{width:10px; height:10px; border-radius:50%; background:#cbd5e1; border:0; cursor:pointer; pointer-events:auto}
+    .dot[aria-current="true"]{background:#1f2937}
+    .nav-btn{position:absolute; top:50%; transform:translateY(-50%); background:#fff; border:1px solid #e5e7eb; width:42px; height:42px; border-radius:50%; cursor:pointer; display:grid; place-items:center; box-shadow:0 4px 14px rgba(0,0,0,.12)}
+    .nav-btn:focus{outline:3px solid var(--ring)}
+    .nav-prev{left:10px}
+    .nav-next{right:10px}
+    /* ===== Form ===== */
+    label{display:grid;gap:.35rem}
+    input,select,textarea{padding:.7rem .8rem;border:1px solid #cbd5e1;border-radius:10px;background:#fff}
+    .row{display:grid;gap:1rem}
+    @media(min-width:640px){.row.two{grid-template-columns:1fr 1fr}.row.three{grid-template-columns:1fr 1fr 1fr}}
+    .btn{display:inline-block;padding:.7rem 1rem;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none;border:0;cursor:pointer}
+    .btn.ghost{background:#fff;color:#222;border:1px solid #e2e8f0}
+    .hint{color:var(--muted);font-size:.95rem}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Închiriere auto smart</h1>
+    <p><em>Comfort, calitate si rapiditate</em></p>
+    <nav aria-label="Navigare principală">
+      <a href="#flota">Flotă</a>
+      <a href="#rezervare">Rezervare online</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="flota" aria-labelledby="flotaTitle">
+    <h2 id="flotaTitle">Flota noastră</h2>
+
+    <div class="carousel card" role="region" aria-roledescription="carusel" aria-label="Flotă auto" tabindex="0">
+      <button class="nav-btn nav-prev" aria-label="Anterior" type="button">‹</button>
+      <button class="nav-btn nav-next" aria-label="Următor" type="button">›</button>
+
+      <div class="carousel-viewport" id="viewport" aria-live="polite">
+        <!-- Slide 1 -->
+        <article class="slide" aria-label="1 din 2">
+          <"C:\Users\Admin\Downloads\WhatsApp Image 2025-07-18 at 18.57.53.jpeg">
+          <div>
+            <h3>Volkswagen Caravelle 8+1</h3>
+            <p class="price">80 €/zi</p>
+            <ul>
+              <li>Microbuz confortabil, ideal pentru grupuri</li>
+              <li>AC, spațiu bagaje, categoria B, automat,</li>
+            </ul>
+            <a class="btn" href="#rezervare" data-model="Volkswagen Caravelle">Rezervă Caravelle</a>
+          </div>
+        </article>
+
+        <!-- Slide 2 -->
+        <article class="slide" aria-label="2 din 2">
+          <"C:\Users\Admin\Desktop\d3ca4759-f5d8-4836-8b5d-9eb017e40a09.jpg">
+          <div>
+            <h3>SsangYong Korando (SUV)</h3>
+            <p class="price">60 €/zi</p>
+            <ul>
+              <li>SUV spațios, automată</li>
+              <li>Ideal pentru oraș și drum lung</li>
+            </ul>
+            <a class="btn" href="#rezervare" data-model="SsangYong Korando">Rezervă Korando</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="c-controls" aria-hidden="false">
+        <button class="dot" type="button" aria-label="Slide 1" aria-current="true"></button>
+        <button class="dot" type="button" aria-label="Slide 2"></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="rezervare" aria-labelledby="rezTitle">
+    <h2 id="rezTitle">Rezervare online</h2>
+    <p class="hint">Completează formularul — se deschide emailul către <strong>ionut.iliuta@yahoo.com</strong> cu detaliile precompletate.</p>
+
+    <form id="form" class="card" onsubmit="return handleSubmit(event)">
+      <div class="row two">
+        <label>Nume și prenume *
+          <input name="name" required>
+        </label>
+        <label>Telefon *
+          <input name="phone" required pattern="^0\\d{8,9}$" title="Număr național, ex. 07xxxxxxxx">
+        </label>
+      </div>
+      <div class="row two">
+        <label>Email
+          <input name="email" type="email">
+        </label>
+        <label>Model dorit
+          <select name="model" id="modelSelect">
+            <option>Volkswagen Caravelle</option>
+            <option>SsangYong Korando</option>
+          </select>
+        </label>
+      </div>
+      <div class="row three">
+        <label>Preluare *
+          <input name="from" type="date" required>
+        </label>
+        <label>Predare *
+          <input name="to" type="date" required>
+        </label>
+        <label>Loc preluare
+          <input name="pickup" placeholder="Bragadiru / Bucuresti / adresă">
+        </label>
+      </div>
+      <label>Mesaj
+        <textarea name="msg" rows="4" placeholder="Ore aproximative, extra-opțiuni…"></textarea>
+      </label>
+      <div style="display:flex; gap:.6rem; flex-wrap:wrap; align-items:center">
+        <button class="btn" type="submit">Trimite pe email</button>
+        <button class="btn ghost" type="button" onclick="openWhatsApp()">Trimite pe WhatsApp</button>
+      </div>
+    </form>
+  </section>
+
+  <section id="contact" aria-labelledby="contactTitle">
+    <h2 id="contactTitle">Contact</h2>
+    <p>📞 Telefon: <a href="tel:0761849752">0761849752</a></p>
+    <p>✉️ Email: <a href="mailto:ionut.iliuta@yahoo.com">ionut.iliuta@yahoo.com</a></p>
+    <p>💬 WhatsApp: <a href="https://wa.me/40761849752" target="_blank" rel="noopener">Chat pe WhatsApp</a></p>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> Închiriere auto smart</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ===== Carousel logic =====
+    const viewport = document.getElementById('viewport');
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const dots = Array.from(document.querySelectorAll('.dot'));
+    const prevBtn = document.querySelector('.nav-prev');
+    const nextBtn = document.querySelector('.nav-next');
+    const carousel = document.querySelector('.carousel');
+    let index = 0, startX = 0, currentX = 0, isDragging = false;
+
+    function update(){
+      viewport.style.transform = `translateX(${-index * 100}%)`;
+      dots.forEach((d,i)=>d.setAttribute('aria-current', i===index ? 'true' : 'false'));
+    }
+    function go(i){
+      index = (i + slides.length) % slides.length;
+      update();
+    }
+    prevBtn.addEventListener('click', ()=>go(index-1));
+    nextBtn.addEventListener('click', ()=>go(index+1));
+    dots.forEach((d,i)=>d.addEventListener('click', ()=>go(i)));
+
+    // Keyboard nav when carousel focused
+    carousel.addEventListener('keydown', (e)=>{
+      if(e.key==='ArrowRight') go(index+1);
+      if(e.key==='ArrowLeft') go(index-1);
+    });
+
+    // Touch / drag for mobile
+    viewport.addEventListener('touchstart', startDrag, {passive:true});
+    viewport.addEventListener('mousedown', startDrag);
+    function startDrag(e){
+      isDragging = true;
+      startX = (e.touches ? e.touches[0].clientX : e.clientX);
+      viewport.style.transition = 'none';
+      window.addEventListener('touchmove', onDrag, {passive:true});
+      window.addEventListener('mousemove', onDrag);
+      window.addEventListener('touchend', endDrag);
+      window.addEventListener('mouseup', endDrag);
+    }
+    function onDrag(e){
+      if(!isDragging) return;
+      currentX = (e.touches ? e.touches[0].clientX : e.clientX);
+      const dx = currentX - startX;
+      const percent = dx / carousel.clientWidth * 100;
+      viewport.style.transform = `translateX(calc(${-index*100}% + ${percent}%))`;
+    }
+    function endDrag(){
+      if(!isDragging) return;
+      isDragging = false;
+      viewport.style.transition = '';
+      const dx = currentX - startX;
+      if (Math.abs(dx) > carousel.clientWidth * 0.15){
+        if (dx < 0) go(index+1); else go(index-1);
+      } else {
+        update();
+      }
+      window.removeEventListener('touchmove', onDrag);
+      window.removeEventListener('mousemove', onDrag);
+      window.removeEventListener('touchend', endDrag);
+      window.removeEventListener('mouseup', endDrag);
+    }
+    update();
+
+    // Deep-link from slide buttons to form model
+    document.querySelectorAll('[data-model]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const model = btn.getAttribute('data-model');
+        const sel = document.getElementById('modelSelect');
+        if (sel) sel.value = model;
+      });
+    });
+
+    // ===== Form logic =====
+    const EMAIL_TO = "ionut.iliuta@yahoo.com";
+    const WA_NUM = "40761849752";
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target));
+      const lines = [
+        "Cerere rezervare",
+        `Nume: ${data.name}`,
+        `Telefon: ${data.phone}`,
+        `Email: ${data.email||"-"}`,
+        `Model: ${data.model}`,
+        `Perioadă: ${data.from} → ${data.to}`,
+        `Preluare: ${data.pickup||"-"}`,
+        (data.msg||"")
+      ].join("\\n");
+      const mailto = `mailto:${EMAIL_TO}?subject=${encodeURIComponent("Cerere rezervare - " + (data.name||""))}&body=${encodeURIComponent(lines)}`;
+      window.location.href = mailto;
+      return false;
+    }
+
+    function openWhatsApp(){
+      const f = document.getElementById('form');
+      const d = Object.fromEntries(new FormData(f));
+      const text = `Rezervare: ${d.name||""}, Tel: ${d.phone||""}, Model: ${d.model||""}, ${d.from||""}→${d.to||""}, Preluare: ${d.pickup||"-"}`;
+      window.open(`https://wa.me/${WA_NUM}?text=${encodeURIComponent(text)}`,"_blank");
+    }
+  </script>
+</body>
+</html>
